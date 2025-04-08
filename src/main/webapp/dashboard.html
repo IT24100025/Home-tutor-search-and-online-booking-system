@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Home Tutor System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Welcome to Home Tutor System</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="tutor-list.html">Find Tutors</a>
+            <a href="#" id="profileLink">My Profile</a>
+            <a href="#" id="logoutLink">Logout</a>
+        </nav>
+    </header>
+
+    <div class="dashboard-content">
+        <div id="user-info">
+            <h2>Welcome, <span id="username-display"></span>!</h2>
+            <div id="tutor-status"></div>
+        </div>
+
+        <div class="dashboard-actions">
+            <div id="become-tutor-section" class="dashboard-card hidden">
+                <h3>Become a Tutor</h3>
+                <p>Register as a tutor to start teaching students.</p>
+                <a href="tutor-registration.html" class="btn">Register as Tutor</a>
+            </div>
+
+            <div id="tutor-dashboard" class="dashboard-card hidden">
+                <h3>Tutor Dashboard</h3>
+                <p>Manage your tutor profile and view bookings.</p>
+                <a href="#" id="edit-tutor-profile" class="btn">Edit Profile</a>
+                <a href="#" id="view-bookings" class="btn">View Bookings</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Find a Tutor</h3>
+                <p>Search for qualified tutors in your area.</p>
+                <a href="tutor-list.html" class="btn">Browse Tutors</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
