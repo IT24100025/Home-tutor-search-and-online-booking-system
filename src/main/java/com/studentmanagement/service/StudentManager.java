@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentManager {
-    private static final String FILE_PATH = "students.txt";
+    private static final String FILE_PATH = "D:\\java Ultimate\\Test Project\\OOP_Test_01- done\\OOP\\src\\main\\resources\\students.txt";
     private List<Student> students;
 
     public StudentManager() {
