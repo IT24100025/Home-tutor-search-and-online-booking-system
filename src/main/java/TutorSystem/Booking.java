@@ -18,7 +18,13 @@ public class Booking implements Serializable {
         this.date = date;
     }
 
+    public Booking(int i, String part, String part1, String part2, String part3) {
+    }
+
     // Getters and Setters
+
+    public String getId() { return bookingId; }
+
     public String getBookingId() { return bookingId; }
     public void setBookingId(String bookingId) { this.bookingId = bookingId; }
 
