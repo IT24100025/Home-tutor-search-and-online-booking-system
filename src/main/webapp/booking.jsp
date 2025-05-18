@@ -51,8 +51,18 @@
             <input type="text" class="form-control" name="tutorName" required>
           </div>
           <div class="mb-3">
+            <label class="form-label">Education Level</label>
+            <select class="form-control" id="educationLevel" required>
+              <option value="">Select Education Level</option>
+              <option value="AL">Advanced Level (AL)</option>
+              <option value="OL">Ordinary Level (OL)</option>
+            </select>
+          </div>
+          <div class="mb-3">
             <label class="form-label">Subject</label>
-            <input type="text" class="form-control" name="subject" required>
+            <select class="form-control" name="subject" id="subjectSelect" required disabled>
+              <option value="">Select a subject</option>
+            </select>
           </div>
           <div class="mb-3">
             <label class="form-label">Date</label>
@@ -116,5 +126,28 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  var subjectCategories = JSON.parse('${subjectCategoriesJson}');
+
+  document.getElementById('educationLevel').addEventListener('change', function() {
+    const subjectSelect = document.getElementById('subjectSelect');
+    const selectedLevel = this.value;
+
+    // Clear current options
+    subjectSelect.innerHTML = '<option value="">Select a subject</option>';
+
+    if (selectedLevel && subjectCategories[selectedLevel]) {
+      subjectSelect.disabled = false;
+      subjectCategories[selectedLevel].forEach(subject => {
+        const option = document.createElement('option');
+        option.value = subject;
+        option.text = subject;
+        subjectSelect.appendChild(option);
+      });
+    } else {
+      subjectSelect.disabled = true;
+    }
+  });
+</script>
 </body>
 </html>

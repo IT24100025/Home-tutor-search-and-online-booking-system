@@ -1,6 +1,5 @@
 package TutorSystem;
 
-
 import java.io.Serializable;
 
 public class Booking implements Serializable {
@@ -39,4 +38,14 @@ public class Booking implements Serializable {
 
     public String getDate() { return date; }
     public void setDate(String date) { this.date = date; }
+
+    @Override
+    public String toString() {
+        return String.format("%s,%s,%s,%s,%s",
+                bookingId,
+                studentName,
+                tutorName,
+                subject,
+                date);
+    }
 }

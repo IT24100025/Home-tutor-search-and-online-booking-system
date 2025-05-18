@@ -2,6 +2,7 @@ package TutorSystem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BookingManager {
     private List<Booking> bookings = new ArrayList<>();
@@ -29,5 +30,13 @@ public class BookingManager {
 
     public List<Booking> getAllBookings() {
         return bookings;
+    }
+
+    public List<String> getSortedSubjects() {
+        return SubjectSorter.getSortedSubjects(bookings);
+    }
+
+    public Map<String, List<String>> getSubjectCategories() {
+        return SubjectSorter.getSubjectCategories();
     }
 }
