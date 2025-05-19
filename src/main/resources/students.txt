@@ -1,3 +1,0 @@
-STU1747289966683,manuka,abeysekara,2004-03-04,Male,2004,kandy,077,manuka01
-STU1747300380704,manuka,abeysekara,2004-03-04,Male,2004,matale,077,manuka
-STU1747300859351,manuka,abeysekara,2004-03-04,Male,2004,matale,077,manuka
