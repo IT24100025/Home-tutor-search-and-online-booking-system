@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet Mappings -->
+    <servlet>
+        <servlet-name>RecordPaymentServlet</servlet-name>
+        <servlet-class>com.example.payment.ModifyPaymentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecordPaymentServlet</servlet-name>
+        <url-pattern>/recordPaymentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ModifyPaymentServlet</servlet-name>
+        <servlet-class>com.example.payment.ModifyPaymentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyPaymentServlet</servlet-name>
+        <url-pattern>/modifyPaymentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CancelPaymentServlet</servlet-name>
+        <servlet-class>com.example.payment.ModifyPaymentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CancelPaymentServlet</servlet-name>
+        <url-pattern>/cancelPaymentServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+
+
