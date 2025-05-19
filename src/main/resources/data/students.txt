@@ -1,0 +1,4 @@
+Manuka|Abeysekara|2004-03-29|Male|200409642604|No 06, Rahula Mawatha, Matale|779866613|STD000000001|Manuka01
+Shehan|Abeysekara|2004-03-29|Male|200409642604|No 06, Rahula Mawatha, Peradeniya|773955516|STD000000002|manuka04
+Nadeesha|Abeysekara|2004-03-29|Male|200409642645|No 06, Rahula Mawatha, Kandy|779866802|STD000000004|manuka04
+Nadeesha|Abeysekara|2004-03-29|Male|200409642645|No 06, Rahula Mawatha, Kandy|779866802|STD000000005|manuka05
