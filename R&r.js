@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Star Rating Selection
     const stars = document.querySelectorAll('.rating-input .star');
     let selectedRating = 0;
 
