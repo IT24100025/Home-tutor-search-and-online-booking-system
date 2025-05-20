@@ -12,6 +12,12 @@
         <p>Access your tutor account to manage your profile and bookings</p>
     </div>
 
+    <% if (request.getParameter("error") != null) { %>
+    <div class="error-message">
+        <%= request.getParameter("error") %>
+    </div>
+    <% } %>
+
     <form id="loginForm" action="TutorLoginServlet" method="POST">
         <div class="form-group">
             <label for="email">Email:</label>
@@ -26,12 +32,9 @@
         <button type="submit" class="btn-login">Login</button>
 
         <div class="form-footer">
-            <p>Don't have an account? <a href="tutor-profile.jsp?action=create">Register as Tutor</a></p>
-            <p><a href="#">Forgot Password?</a></p>
+            <p>Don't have an account? <a href="tutor-register.jsp">Register as Tutor</a></p>
         </div>
     </form>
 </div>
-
-<script src="js/script.js"></script>
 </body>
 </html>

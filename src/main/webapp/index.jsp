@@ -13,8 +13,8 @@
     </div>
 
     <div class="form-actions" style="justify-content: center;">
-        <a href="tutor-login.jsp" class="btn-login" style="text-decoration: none; text-align: center; display: inline-block; width: auto; padding: 12px 30px;">Tutor Login</a>
-        <a href="student-login.jsp" class="btn-login" style="text-decoration: none; text-align: center; display: inline-block; width: auto; padding: 12px 30px; margin-left: 20px; background-color: #2ecc71;">Student Login</a>
+        <a href="tutor-login.jsp" class="btn-login">Tutor Login</a>
+        <a href="tutor-register.jsp" class="btn-login" style="margin-left: 20px; background-color: #2ecc71;">Register as Tutor</a>
     </div>
 </div>
 </body>

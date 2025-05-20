@@ -6,13 +6,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import jakarta.servlet.ServletException;
 
 @WebServlet("/TutorCRUDServlet")
 public class TutorCRUDServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String action = request.getParameter("action");
 
         try {
@@ -20,22 +19,19 @@ public class TutorCRUDServlet extends HttpServlet {
                 createTutor(request, response);
             } else if ("update".equals(action)) {
                 updateTutor(request, response);
-            } else if ("delete".equals(action)) {
-                deleteTutor(request, response);
             } else {
-                response.sendRedirect("tutor-login.html?error=Invalid action");
+                response.sendRedirect("tutor-login.jsp?error=Invalid action");
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendRedirect("tutor-login.html?error=Error processing your request");
+            response.sendRedirect("tutor-register.jsp?error=Error processing your request");
         }
     }
 
     private void createTutor(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // Generate a simple ID (in a real app, use a better method)
         String tutorId = "T" + System.currentTimeMillis();
         String email = request.getParameter("email");
-        String password = request.getParameter("password"); // In real app, hash this
+        String password = request.getParameter("password");
         String name = request.getParameter("name");
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
@@ -61,22 +57,17 @@ public class TutorCRUDServlet extends HttpServlet {
             }
         }
 
-        // Format tutor data for storage (pipe-separated)
         String tutorData = String.join("|",
                 tutorId, email, password, name, address, phone,
                 subjects, grades, experience, hourlyRate,
                 availability.toString(), bio);
 
-        // Save to file
         FileUtil.saveTutor(tutorData);
-
-        // Redirect to profile view
-        response.sendRedirect("tutor-profile.html?action=view&id=" + tutorId);
+        response.sendRedirect("TutorProfileServlet?id=" + tutorId);
     }
 
     private void updateTutor(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String tutorId = request.getParameter("tutorId");
-        String email = request.getParameter("email");
         String name = request.getParameter("name");
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
@@ -102,36 +93,23 @@ public class TutorCRUDServlet extends HttpServlet {
             }
         }
 
-        // Get existing tutor data to preserve password
+        // Get existing tutor data to preserve email and password
         String existingTutor = FileUtil.findTutorById(tutorId);
         if (existingTutor == null) {
-            response.sendRedirect("tutor-login.html?error=Tutor not found");
+            response.sendRedirect("tutor-login.jsp?error=Tutor not found");
             return;
         }
 
         String[] parts = existingTutor.split("\\|");
+        String email = parts.length > 1 ? parts[1] : "";
         String password = parts.length > 2 ? parts[2] : "";
 
-        // Format updated tutor data
         String updatedData = String.join("|",
                 tutorId, email, password, name, address, phone,
                 subjects, grades, experience, hourlyRate,
                 availability.toString(), bio);
 
-        // Update in file
         FileUtil.updateTutor(tutorId, updatedData);
-
-        // Redirect to profile view
-        response.sendRedirect("tutor-profile.html?action=view&id=" + tutorId);
-    }
-
-    private void deleteTutor(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String tutorId = request.getParameter("tutorId");
-
-        // Delete from file
-        FileUtil.deleteTutor(tutorId);
-
-        // Redirect to login page
-        response.sendRedirect("tutor-login.html?message=Your profile has been deleted");
+        response.sendRedirect("TutorProfileServlet?id=" + tutorId + "&message=Profile updated successfully");
     }
 }

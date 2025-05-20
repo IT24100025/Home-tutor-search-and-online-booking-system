@@ -6,36 +6,32 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import jakarta.servlet.ServletException;
 
 @WebServlet("/TutorLoginServlet")
 public class TutorLoginServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-
-        // In a real application, you would validate the password securely
-        // For this example, we'll just check if the tutor exists
 
         try {
             String tutorData = FileUtil.findTutorByEmail(email);
 
             if (tutorData != null) {
-                // Successful login - redirect to profile page with tutor ID
+                // Simple password check (in real app, use proper password hashing)
                 String[] parts = tutorData.split("\\|");
-                String tutorId = parts[0];
-                response.sendRedirect("tutor-profile.html?action=view&id=" + tutorId);
+                if (parts.length > 2 && parts[2].equals(password)) {
+                    response.sendRedirect("TutorProfileServlet?id=" + parts[0]);
+                } else {
+                    response.sendRedirect("tutor-login.jsp?error=Invalid password");
+                }
             } else {
-                // Failed login
-                request.setAttribute("error", "Invalid email or password");
-                request.getRequestDispatcher("tutor-login.html").forward(request, response);
+                response.sendRedirect("tutor-login.jsp?error=Tutor not found");
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            request.setAttribute("error", "An error occurred during login");
-            request.getRequestDispatcher("tutor-login.html").forward(request, response);
+            response.sendRedirect("tutor-login.jsp?error=Login error");
         }
     }
 }
