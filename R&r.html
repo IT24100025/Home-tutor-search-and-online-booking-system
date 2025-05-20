@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Tutor Profile | Home Tutor System</title>
+    <link rel="stylesheet" href="R&r.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="tutor-header">
+            <h1>Home Tutor Search and Booking</h1>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="avg-rating">4.2</span>
+                <span class="total-reviews">(24 reviews)</span>
+            </div>
+        </div>
+
+        <div class="review-section">
+            <h2>Leave a Review</h2>
+            <div class="rating-input">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+            </div>
+            <textarea id="review-text" placeholder="Share your experience..."></textarea>
+            <div class="review-tags">
+                <span class="tag" data-tag="patient">👍 Patient</span>
+                <span class="tag" data-tag="knowledgeable">📚 Knowledgeable</span>
+                <span class="tag" data-tag="punctual">⏰ Punctual</span>
+            </div>
+            <div class="anonymous-toggle">
+                <input type="checkbox" id="anonymous">
+                <label for="anonymous">Post Anonymously</label>
+            </div>
+            <button id="submit-review">Submit Review</button>
+        </div>
+
+        <div class="reviews-list">
+            <h2>Reviews</h2>
+            <div class="filter-section">
+                <select id="sort-reviews">
+                    <option value="recent">Most Recent</option>
+                    <option value="highest">Highest Rated</option>
+                    <option value="lowest">Lowest Rated</option>
+                </select>
+                <div class="rating-filter">
+                    <span class="filter-star" data-rating="5">★★★★★</span>
+                    <span class="filter-star" data-rating="4">★★★★☆</span>
+                    <span class="filter-star" data-rating="3">★★★☆☆</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="reviewer">Anonymous</span>
+                    <span class="review-rating">★★★★☆</span>
+                    <span class="review-date">2 weeks ago</span>
+                </div>
+                <p class="review-content">Great tutor! Very patient and explains concepts clearly.</p>
+                <div class="review-tags">
+                    <span class="tag"> Patient</span>
+                    <span class="tag"> Knowledgeable</span>
+                </div>
+                <div class="review-actions">
+                    <button class="helpful-btn"> Helpful (3)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="R&r.js"></script>
+</body>
+</html>
