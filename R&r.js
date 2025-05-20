@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
             .map(tag => tag.getAttribute('data-tag'));
 
         const reviewData = {
-            tutorId: 1, // Example tutor ID
-            studentId: 1, // Example student ID
+            tutorId: 1, 
+            studentId: 1, 
             rating: selectedRating,
             comment: reviewText,
             isAnonymous: isAnonymous,
@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const sortSelect = document.getElementById('sort-reviews');
     sortSelect.addEventListener('change', function() {
         const sortBy = this.value;
-        // Implement sorting logic (e.g., fetch sorted reviews from backend)
         console.log('Sort by:', sortBy);
     });
 
@@ -85,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     filterStars.forEach(star => {
         star.addEventListener('click', function() {
             const rating = this.getAttribute('data-rating');
-            // Implement filtering logic (e.g., fetch filtered reviews)
             console.log('Filter by rating:', rating);
         });
     });
