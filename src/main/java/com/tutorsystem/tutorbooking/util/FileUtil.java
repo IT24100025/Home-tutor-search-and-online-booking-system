@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtil {
-    private static final String TUTORS_FILE = "tutors.txt";
+    private static final String TUTORS_FILE = "C:/Users/fzasl/Downloads/OOP/Project/TutorBooking/data/tutors.txt";
     private static BST tutorsBST = new BST();
     private static boolean isBSTInitialized = false;
 

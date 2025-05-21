@@ -5,15 +5,17 @@
 <head>
     <title>Tutor Profile - Home Tutor System</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <div class="profile-container">
     <header class="profile-header">
-        <h1>Tutor Profile Management</h1>
+        <h1><i class="fas fa-user-graduate"></i> Tutor Profile Management</h1>
         <nav>
-            <a href="#" id="viewProfile">View Profile</a>
-            <a href="#" id="editProfile">Edit Profile</a>
-            <a href="index.jsp" id="logout">Logout</a>
+            <a href="#" id="viewProfile"><i class="fas fa-eye"></i> View Profile</a>
+            <a href="#" id="editProfile"><i class="fas fa-edit"></i> Edit Profile</a>
+            <a href="index.jsp" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </nav>
     </header>
 
@@ -27,61 +29,61 @@
     %>
 
     <div id="profileView" class="profile-section">
-        <h2>Your Profile Details</h2>
+        <h2><i class="fas fa-id-card"></i> Your Profile Details</h2>
 
         <% if (request.getParameter("message") != null) { %>
         <div class="success-message">
-            <%= request.getParameter("message") %>
+            <i class="fas fa-check-circle"></i> <%= request.getParameter("message") %>
         </div>
         <% } %>
 
         <div class="profile-details">
             <div class="detail-row">
-                <span class="detail-label">Name:</span>
+                <span class="detail-label"><i class="fas fa-user"></i> Name:</span>
                 <span class="detail-value"><%= tutorInfo.length > 3 ? tutorInfo[3] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Email:</span>
+                <span class="detail-label"><i class="fas fa-envelope"></i> Email:</span>
                 <span class="detail-value"><%= tutorInfo.length > 1 ? tutorInfo[1] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Address:</span>
+                <span class="detail-label"><i class="fas fa-map-marker-alt"></i> Address:</span>
                 <span class="detail-value"><%= tutorInfo.length > 4 ? tutorInfo[4] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Contact Number:</span>
+                <span class="detail-label"><i class="fas fa-phone"></i> Contact Number:</span>
                 <span class="detail-value"><%= tutorInfo.length > 5 ? tutorInfo[5] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Subjects:</span>
+                <span class="detail-label"><i class="fas fa-book"></i> Subjects:</span>
                 <span class="detail-value"><%= tutorInfo.length > 6 ? tutorInfo[6] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Grades to Teach:</span>
+                <span class="detail-label"><i class="fas fa-graduation-cap"></i> Grades to Teach:</span>
                 <span class="detail-value"><%= tutorInfo.length > 7 ? tutorInfo[7] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Experience:</span>
+                <span class="detail-label"><i class="fas fa-briefcase"></i> Experience:</span>
                 <span class="detail-value"><%= tutorInfo.length > 8 ? tutorInfo[8] + " years" : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Hourly Rate:</span>
+                <span class="detail-label"><i class="fas fa-money-bill-wave"></i> Hourly Rate:</span>
                 <span class="detail-value">$<%= tutorInfo.length > 9 ? tutorInfo[9] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">Availability:</span>
+                <span class="detail-label"><i class="fas fa-calendar-alt"></i> Availability:</span>
                 <span class="detail-value"><%= tutorInfo.length > 10 ? tutorInfo[10] : "" %></span>
             </div>
             <div class="detail-row">
-                <span class="detail-label">About Me:</span>
+                <span class="detail-label"><i class="fas fa-info-circle"></i> About Me:</span>
                 <span class="detail-value"><%= tutorInfo.length > 11 ? tutorInfo[11] : "" %></span>
             </div>
         </div>
-        <button id="enableEdit" class="btn-edit">Edit Profile</button>
+        <button id="enableEdit" class="btn-edit"><i class="fas fa-edit"></i> Edit Profile</button>
     </div>
 
     <div id="profileEdit" class="profile-section" style="display:none;">
-        <h2>Edit Your Profile</h2>
+        <h2><i class="fas fa-edit"></i> Edit Your Profile</h2>
         <form id="profileForm" action="TutorCRUDServlet" method="POST">
             <input type="hidden" name="action" value="update">
             <input type="hidden" name="tutorId" value="<%= tutorInfo[0] %>">
@@ -162,8 +164,8 @@
             </div>
 
             <div class="form-actions">
-                <button type="submit" class="btn-save">Save Changes</button>
-                <button type="button" id="cancelEdit" class="btn-cancel">Cancel</button>
+                <button type="submit" class="btn-save"><i class="fas fa-save"></i> Save Changes</button>
+                <button type="button" id="cancelEdit" class="btn-cancel"><i class="fas fa-times"></i> Cancel</button>
             </div>
         </form>
     </div>

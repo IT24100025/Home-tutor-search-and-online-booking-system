@@ -1,6 +1,4 @@
-T1747648048311|fzaslam.45@gmail.com|Fathima1234|Fathima Zamra Aslam|No.17/B, Bulugohatenne Akurana|0775288022|Science|1-12|3|20.00|Not specified|New tutor
-T1747650027487|zamra.aslam123@gmail.com|Zam12345|Zamra Aslam5555|No.17/B, Bulugohatenne Akurana|0775288022|English, Mathematics|10|4|100||happy
-T1747655763265|IT24100025@my.sliit.lk|Zam1234567890|Pangaragammana Muhandiranlegedara Mohammed Aslam Fathima Zamra|No.17/B, Bulugohatenne Akurana|0775288022|English|1-12|3|20.00|Not specified|New tutor
-T1747655922651|zam.aslam@gamil.com|zamra2345|Zamra Aslam|No.17/B, Bulugohatenne Akurana|0775288022|English|null|null|null|Not specified|null
-T1747656532788|zam.aslam@gamil.com|Zamra1234567890|Zamra Aslam|No.17/B, Bulugohatenne Akurana|0775288022|Physics, Chemistry|12|3|100|Monday 12:30-14:30, Saturday 08:30-10:30|Taught for 3 years
-T1747656907547|aslam.zamra@gmail.com|aslam1245|Mohammed Aslam Fathima Zamra|No.336, Chillaw Rd, Negombo|0777631091|Physics, Chemistry|12|3|100|Monday 12:30-14:30, Thursday 06:30-08:30|Was a teacher at Negombo Sussex
+T1747648048311|fzaslam.45@gmail.com|Fathima1234|Fathima Zamra Aslam|No.17/B, Bulugohatenne Akurana|0775288022|Science|10|3|20.00|Monday 12:00-14:00|New tutor
+T1747650027487|zamra.aslam123@gmail.com|Zam12345|Zamra Aslam5555|No.17/B, Bulugohatenne Akurana|0775288022|English, Mathematics|10|4|100|Monday 00:30-02:00|happy
+T1747655763265|IT24100025@my.sliit.lk|Zam1234567890|Pangaragammana Muhandiranlegedara Mohammed Aslam Fathima Zamra|No.17/B, Bulugohatenne Akurana|0775288022|English|1-12|3|20.00|Monday 15:30-17:30|New tutor
+T1747822867052|damsara123@gmail.com|damsara123|Damsara Nipun|Kandy Uni|0123456789|English|5|3|120|Monday 10:30-12:30|Taught at Kandy Uni
