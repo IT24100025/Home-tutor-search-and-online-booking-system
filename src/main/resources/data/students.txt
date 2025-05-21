@@ -1,4 +1,4 @@
-Nadeesha|Abeysekara|2004-03-29|Male|200409642645|No 06, Rahula Mawatha, Kandy|779866802|STD000000001|manuka01
-Nadeesha|Abeysekara|2004-03-29|Male|200409642645|No 06, Rahula Mawatha, Peradeniya|773955516|STD000000002|manuka10
-Nadeesha|Abeysekara|2004-03-29|Male|200409642645|No 06, Rahula Mawatha, Kandy|779866802|STD000000004|manuka03
-Nadeesha|Abeysekara|2004-03-29|Male|200409642645|No 06, Rahula Mawatha, Kandy|779866802|STD000000005|manuka03
+Manuka|Abeysekara|2004-03-29|Male|200409642645|n0 06, Rahula Mawatha, Matale|779866613|STD000000001|manuka01
+Manuka|Abeysekara|2004-03-29|Male|200409642645|kandy|773955516|STD000000002|manuka06
+Manuka|Abeysekara|2004-03-29|Male|200409642645|kandy|773955516|STD000000004|manuka06
+Manuka|Abeysekara|2004-03-29|Male|200409642645|n0 06, Rahula Mawatha, Matale|779866613|STD000000005|manuka05

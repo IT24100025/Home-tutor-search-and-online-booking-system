@@ -2,8 +2,6 @@ package org.example.oop;
 
 public class Process {
 
-    String done1;
-
     LinkedList list = new LinkedList();
     public SignUp signUp = new SignUp();
     public Login login = new Login();
@@ -26,7 +24,7 @@ public class Process {
 
         if (storedStudentID.equals(login.getLoginStudentID()) && storedPassword == null) {
             return "Your Account is Deleted!";
-        } else if (storedStudentID.equals(login.getLoginStudentID()) && storedPassword.equals(login.getLoginPassword())) {                //&& storedPassword != null
+        } else if (storedStudentID.equals(login.getLoginStudentID()) && storedPassword.equals(login.getLoginPassword())) {
             return "Login Successful";
         } else {
             return "Login Failed! Please try again";
@@ -44,7 +42,7 @@ public class Process {
 
         if (storedStudentID.equals(edit.getEnterStudentID()) && storedPassword == null) {
             return "Your Account is Deleted!";
-        } else if (storedStudentID.equals(edit.getEnterStudentID()) && storedPassword != null && storedPassword.equals(edit.getEnterPassword())) {
+        } else if (storedStudentID.equals(edit.getEnterStudentID()) && storedPassword.equals(edit.getEnterPassword())) {
             return "Login Successful";
         } else {
             return "Login Failed! Please try again";
@@ -74,7 +72,7 @@ public class Process {
 
         if (storedStudentID.equals(delete.getEnterStudentID()) && storedPassword == null) {
             return "Your Account is Deleted!";
-        } else if (storedStudentID.equals(delete.getEnterStudentID()) && storedPassword != null && storedPassword.equals(delete.getEnterPassword())) {
+        } else if (storedStudentID.equals(delete.getEnterStudentID()) && storedPassword.equals(delete.getEnterPassword())) {            
             return "Login Successful";
         } else {
             return "Login Failed! Please try again";
