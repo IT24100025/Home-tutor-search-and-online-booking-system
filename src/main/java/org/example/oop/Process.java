@@ -26,7 +26,7 @@ public class Process {
 
         if (storedStudentID.equals(login.getLoginStudentID()) && storedPassword == null) {
             return "Your Account is Deleted!";
-        } else if (storedStudentID.equals(login.getLoginStudentID()) && storedPassword != null && storedPassword.equals(login.getLoginPassword())) {
+        } else if (storedStudentID.equals(login.getLoginStudentID()) && storedPassword.equals(login.getLoginPassword())) {                //&& storedPassword != null
             return "Login Successful";
         } else {
             return "Login Failed! Please try again";
