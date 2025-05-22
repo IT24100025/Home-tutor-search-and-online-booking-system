@@ -29,7 +29,6 @@ public class TutorCRUDServlet extends HttpServlet {
     }
 
     private void createTutor(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String tutorId = "T" + System.currentTimeMillis();
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String name = request.getParameter("name");
@@ -57,13 +56,21 @@ public class TutorCRUDServlet extends HttpServlet {
             }
         }
 
+        // Create tutor data with empty ID (FileUtil will generate it)
         String tutorData = String.join("|",
-                tutorId, email, password, name, address, phone,
+                "", // Empty ID - FileUtil will generate it
+                email, password, name, address, phone,
                 subjects, grades, experience, hourlyRate,
                 availability.toString(), bio);
 
-        FileUtil.saveTutor(tutorData);
-        response.sendRedirect("TutorProfileServlet?id=" + tutorId);
+        // Save tutor and get the generated ID
+        String tutorId = FileUtil.saveTutorAndGetId(tutorData);
+
+        if (tutorId != null && !tutorId.isEmpty()) {
+            response.sendRedirect("TutorProfileServlet?id=" + tutorId);
+        } else {
+            response.sendRedirect("tutor-register.jsp?error=Registration failed");
+        }
     }
 
     private void updateTutor(HttpServletRequest request, HttpServletResponse response) throws IOException {

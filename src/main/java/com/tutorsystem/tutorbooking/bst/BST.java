@@ -1,17 +1,21 @@
 package com.tutorsystem.tutorbooking.bst;
 
 import com.tutorsystem.tutorbooking.model.Tutor;
+import java.util.List;
 
 public class BST {
     private BSTNode root;
+    private int size = 0;  // Added size tracking
 
     public BST() {
         root = null;
+        size = 0;
     }
 
     // Insert a new tutor
     public void insert(Tutor tutor) {
         root = insertRec(root, tutor);
+        size++;  // Increment size on insertion
     }
 
     private BSTNode insertRec(BSTNode root, Tutor tutor) {
@@ -20,10 +24,12 @@ public class BST {
             return root;
         }
 
-        if (tutor.getId().compareTo(root.tutor.getId()) < 0)
+        if (tutor.getId().compareTo(root.tutor.getId()) < 0) {
             root.left = insertRec(root.left, tutor);
-        else if (tutor.getId().compareTo(root.tutor.getId()) > 0)
+        } else if (tutor.getId().compareTo(root.tutor.getId()) > 0) {
             root.right = insertRec(root.right, tutor);
+        }
+        // Note: If IDs are equal, we don't insert (maintaining unique IDs)
 
         return root;
     }
@@ -62,15 +68,25 @@ public class BST {
     }
 
     // In-order traversal to get all tutors
-    public void inOrder(java.util.List<Tutor> list) {
+    public void inOrder(List<Tutor> list) {
         inOrderRec(root, list);
     }
 
-    private void inOrderRec(BSTNode root, java.util.List<Tutor> list) {
+    private void inOrderRec(BSTNode root, List<Tutor> list) {
         if (root != null) {
             inOrderRec(root.left, list);
             list.add(root.tutor);
             inOrderRec(root.right, list);
         }
+    }
+
+    // New method to get the size of the BST
+    public int size() {
+        return size;
+    }
+
+    // Optional: Method to check if BST is empty
+    public boolean isEmpty() {
+        return size == 0;
     }
 }
