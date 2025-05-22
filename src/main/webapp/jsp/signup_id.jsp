@@ -16,11 +16,11 @@
     <input type="hidden" name="action" value="password">
     <div>
       <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-      <input type="password" id="password" name="password" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      <input type="password" id="password" name="password" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
     </div>
     <div>
       <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      <input type="password" id="confirmPassword" name="confirmPassword" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
     </div>
     <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Sign Up</button>
   </form>

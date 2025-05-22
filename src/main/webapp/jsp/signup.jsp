@@ -12,19 +12,19 @@
         <input type="hidden" name="action" value="details">
         <div>
             <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-            <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <input type="text" id="firstName" name="firstName" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div>
             <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <input type="text" id="lastName" name="lastName" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div>
             <label for="dateOfBirth" class="block text-sm font-medium text-gray-700">Date of Birth</label>
-            <input type="date" id="dateOfBirth" name="dateOfBirth" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div>
             <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
-            <select id="gender" name="gender" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <select id="gender" name="gender" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
@@ -32,15 +32,15 @@
         </div>
         <div>
             <label for="nid" class="block text-sm font-medium text-gray-700">NIC Number</label>
-            <input type="number" id="nid" name="nid" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <input type="number" id="nid" name="nid" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div>
             <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
-            <input type="text" id="address" name="address" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <input type="text" id="address" name="address" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <div>
             <label for="phoneNo" class="block text-sm font-medium text-gray-700">Phone Number</label>
-            <input type="number" id="phoneNo" name="phoneNo" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+            <input type="number" id="phoneNo" name="phoneNo" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
         <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Next</button>
     </form>

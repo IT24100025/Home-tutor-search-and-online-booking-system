@@ -11,11 +11,11 @@
   <form action="${pageContext.request.contextPath}/login" method="post" class="space-y-4">
     <div>
       <label for="studentID" class="block text-sm font-medium text-gray-700">Student ID</label>
-      <input type="text" id="studentID" name="studentID" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      <input type="text" id="studentID" name="studentID" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
     </div>
     <div>
       <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-      <input type="password" id="password" name="password" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      <input type="password" id="password" name="password" required class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
     </div>
     <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Login</button>
   </form>

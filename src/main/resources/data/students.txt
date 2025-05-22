@@ -1,4 +1,4 @@
 Manuka|Abeysekara|2004-03-29|Male|200409642645|n0 06, Rahula Mawatha, Matale|779866613|STD000000001|manuka01
 Manuka|Abeysekara|2004-03-29|Male|200409642645|kandy|773955516|STD000000002|manuka06
 Manuka|Abeysekara|2004-03-29|Male|200409642645|kandy|773955516|STD000000004|manuka06
-Manuka|Abeysekara|2004-03-29|Male|200409642645|n0 06, Rahula Mawatha, Matale|779866613|STD000000005|manuka05
+Manuka|Abeysekara|2004-03-29|Male|200409642645|matale|77|STD000000005|manuka06
