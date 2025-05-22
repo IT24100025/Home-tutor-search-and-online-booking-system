@@ -1,0 +1,5 @@
+T000001|thisun123@gmail.com|thisun123|Thisun Rathnayake|Dambulla|12345678|Science|11|2|120|Monday 12:30-14:30|qwertyu
+T000002|manuka123@gmail.com|manuka123|Manuka Abeysekara|Matale Town|1234567890|Information Technology|12|2|100|Monday 14:30-16:30|Taught in matale
+T000003|gihindu345@gmail.com|gihindu1234|Gihindu|Matale Town|1234567|Science|10|3|100|Wednesday 15:30-17:30|Taught in Ratnapura
+T000004|damsara123@gmail.com|damsara123|Damsara Nipun|Kandy Uni|0123456789|Mathematics|10|2|80|Thursday 08:00-10:00|Taught at a reputed institute
+T000005|zamra.aslam123@gmail.com|zamra123|Zamra Aslam|No.17/B, Bulugohatenne Akurana|0775288022|Mathematics|12|3|100|Thursday 08:30-10:30|Taught in Akurana Balika
